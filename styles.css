@@ -1,103 +1,153 @@
-/* ===== General Reset =====*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
 body {
-    line-height: 1.6;
-    background: #9f9f9f;
-    color: #333;
-
+    font-family: 'Open Sans';       /* Sets the main font style for the entire page */
+    background-color: #fff;         /* Sets the page background color to white */
+    color: #333;                    /* Sets the default text color to dark gray */
+    overflow-x: hidden;             /* Prevents horizontal scrolling */
 }
-/* ===== Container for consistent spacing =====*/
-.container {
-    width: 90%
-    max-width 1100px;
-    margin: 0 auto;
 
+/* Top Navigation Bar */
+.topbar {
+    background: #5888b9;            /* Sets topbar background color */
+    color: #fff;                    /* Sets text color inside the topbar to white */
+    padding: 0.5em 10%;             /* Adds padding: 0.5em top & bottom, 10% left & right */
+    width: 100%;                    /* Makes the topbar span the full width */
 }
-/* ===== Header & Navigation =====*/
-.site-header {
-    background: #003366; /*dark blue */
-    color: white;
-    padding: 15px 0;
 
+.nav-links {
+    list-style: none;               /* Removes default list bullets */
+    display: flex;                  /* Displays list items in a row */
+    justify-content: center;        /* Centers the links horizontally */
+    gap: 2em;                       /* Adds space between each link */
 }
+
+.nav-links li a {
+    color: white;                   /* Sets link color to white */
+    text-decoration: none;          /* Removes underline from links */
+    font-size: 14px;                /* Sets font size of links */
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;                  /* Uses flexbox for layout */
+    justify-content: space-around;  /* Spaces out logo & nav items evenly */
+    align-items: center;            /* Vertically centers the items */
+    background-color: #fff;         /* Sets background color to white */
+    padding: 1em 2em;               /* Adds padding around the nav */
+    flex-wrap: wrap;                /* Wraps items to the next line if needed */
+}
+
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-
-}
-.main-nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-    font-weight: 500;
-}
-.main-nav a:hover,
-.main-nav a[aria-current="page"]{
-    text-decoration: underline;
+    height: 15vh;                   /* Sets logo height to 15% of viewport height */
+    margin-top: -3em;               /* Moves logo upwards slightly */
 }
 
-/* ===== Hero Section ===== */
-.hero{
-    background: #e6f0ff;
-    padding: 50px 0;
-    text-align: center;
+.nav-section {
+    text-align: center;             /* Centers text inside each nav section */
+    padding: 1em;                   /* Adds padding around each section */
 }
-.hero h2{
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-.hero p{
-    font-size: 18px;
-    color: #555;
-}
-/* ===== Content Section ===== */
-.content{
-    padding: 30px 0;
-}
-.content h3{
-   font-size: 24px;
-   margin-bottom: 10px
-}
-.content p{
-    font-size: 16px;
-    color: #444;
-}
-/* ===== Footer =====*/
-.site-footer {
-    background: #003366;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
-}
-/* ===== Programmes Page (extra styles) =====*/
-.pg-hero {
-    padding:40px 0;
-    text-align: center;
-}
-.pg-hero h2{
-    font-size: 28px;
-    margin-bottom: 8px;
-}
-.pg-list {
-    display: grid;
-    gap: 18px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    padding: 24px 0;
-}
-.programme-card {
-    padding: 16px;
-    border-radius: 8px;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0,05);
 
+.nav-section a {
+    display: block;                 /* Makes links behave like block elements */
+    color: #000;                    /* Sets link color to black */
+    text-decoration: none;          /* Removes underline from links */
+    font-weight: bold;              /* Makes links bold */
 }
-.programme-card h3{
-    margin-bottom: 8px;
-    color: #003366
+
+.nav-section p {
+    font-size: 0.75em;              /* Makes subtext smaller */
+    color: #555;                    /* Sets subtext color to gray */
+    margin-top: 5px;                /* Adds spacing above subtext */
+}
+
+.btn-red {
+    background-color: #e74c3c;      /* Sets button background color to red */
+    color: #fff;                    /* Sets button text color to white */
+    padding: 1em 2em 10%;           /* Adds top, right, and bottom padding */
+    border-radius: 4px;             /* Rounds button corners */
+    text-decoration: none;          /* Removes underline from button text */
+    font-weight: bold;              /* Makes button text bold */
+}
+
+/* Programmes Banner */
+.programmes {
+    background-color: black;        /* Sets banner background to black */
+    color: white;                   /* Sets banner text color to white */
+    padding: 30px 10%;              /* Adds padding: 30px top & bottom, 10% left & right */
+    font-weight: bold;              /* Makes banner text bold */
+    font-size: 2.5em                /* Makes banner text large */
+}
+
+.breadcrumbs {
+    padding: 15px 10%;              /* Adds padding to breadcrumbs */
+    background-color: #fff;         /* Sets background to white */
+    font-size: 0.95em;              /* Slightly smaller breadcrumb text */
+    color: #666;                    /* Sets breadcrumb text color to gray */
+    text-align: left;               /* Aligns breadcrumbs to the left */
+    margin-bottom: 20px;            /* Adds spacing below breadcrumbs */
+}
+
+.breadcrumbs a {
+    color: #666;                    /* Sets breadcrumb link color to gray */
+    text-decoration: none;          /* Removes underline from breadcrumb links */
+}
+
+/* Main Content */
+.content-section {
+    padding: 0 10%;                 /* Adds left & right padding for content */
+    width: 100%;                    /* Makes content section take full width */
+}
+
+.content-section h2 {
+    font-size: 1.8em;               /* Makes section titles larger */
+    font-weight: 700;               /* Makes titles bold */
+    margin-bottom: 15px;            /* Adds spacing below titles */
+    color: #2c3e50;                 /* Sets title color to dark blue-gray */
+}
+
+.content-section ul {
+    list-style: none;               /* Removes default bullet points */
+    padding-left: 0;                /* Removes default padding on the left */
+    margin-left: 0;                 /* Removes extra margin on the left */
+}
+
+.content-section ul li {
+    margin-bottom: 10px;            /* Adds spacing between list items */
+    position: relative;             /* Positions bullet icon absolutely */
+    padding-left: 20px;             /* Adds space for custom bullet */
+}
+
+.content-section ul li::before {
+    content: '•';                   /* Inserts a custom bullet */
+    color: #007bff;                 /* Sets bullet color to blue */
+    font-size: 1.5em;               /* Makes the bullet larger */
+    position: absolute;             /* Positions bullet relative to list item */
+    left: 0;                        /* Aligns bullet to the left */
+    top: -0.1em;                    /* Vertically adjusts bullet position */
+}
+
+.content-section ul li a {
+    text-decoration: none;          /* Removes underline from list links */
+    color: #007bff;                 /* Sets link color to blue */
+    transition: color 0.3s ease;    /* Smooth color transition on hover */
+}
+
+.content-section ul li a:hover {
+    color: #0056b3;                 /* Changes link color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;     /* Stacks nav items vertically on small screens */
+        text-align: center;         /* Centers nav items */
+    }
+
+    .nav-links {
+        flex-direction: column;     /* Stacks links vertically */
+        gap: 1em;                   /* Adds spacing between links */
+    }
+
+    .content-section {
+        padding: 20px 10%;          /* Adds extra padding on smaller screens */
+    }
 }
